@@ -99,9 +99,8 @@ section {
 
 .section-image img,
 .section-image__small img {
-  width: 600px;
-
-  padding-right: 100px;
+  width: 500px;
+  padding-right: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

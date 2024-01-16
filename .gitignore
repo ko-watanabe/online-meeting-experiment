@@ -4,3 +4,7 @@ yarn.lock
 
 .DS_Store
 */.DS_Store
+build/
+
+# Local Netlify folder
+.netlify

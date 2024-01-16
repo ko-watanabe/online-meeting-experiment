@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 
-
 function randomID(len) {
     let result = '';
     if (result) return result;
@@ -23,23 +22,15 @@ function getUrlParams(
     return new URLSearchParams(urlStr);
 }
 
-
-const VideoApp = () => {
-
-
+const Meeting = () => {
     const roomID = getUrlParams().get('roomID') || randomID(5);
-
 
     let myMeeting = async (element) => {
         const appID = 1400438286;
         const serverSecret = "6b8a4a17dc7271263fae348e4f0e866d";
-
-
         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, randomID(5), randomID(5));
 
-        // Create instance object from Kit Token.
         const zp = ZegoUIKitPrebuilt.create(kitToken);
-        // start the call
         zp.joinRoom({
             container: element,
             sharedLinks: [
@@ -66,4 +57,4 @@ const VideoApp = () => {
     )
 }
 
-export default VideoApp
+export default Meeting

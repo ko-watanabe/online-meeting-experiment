@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 // import Welcome from "./Page/Welcome";
-import VideoApp from "./Page/VideoApp";
+import Meeting from "./Page/Meeting.jsx";
 import Main from "./Main.jsx";
 import Login from "./components/Login";
 import Private from "./Page/PrivateRoute";
@@ -15,9 +15,9 @@ function App() {
         <Route path='/' element={<Main />} />
 
 
-        <Route path='/video-app' element={
+        <Route path='/meeting' element={
           <Private>
-            <VideoApp />
+            <Meeting />
           </Private>
         } />
 
