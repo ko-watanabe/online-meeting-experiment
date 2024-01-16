@@ -5,9 +5,7 @@ import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 function randomID(len) {
     let result = '';
     if (result) return result;
-    var chars = '12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP',
-        maxPos = chars.length,
-        i;
+    var chars = '12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP', maxPos = chars.length, i;
     len = len || 5;
     for (i = 0; i < len; i++) {
         result += chars.charAt(Math.floor(Math.random() * maxPos));
@@ -23,6 +21,7 @@ function getUrlParams(
 }
 
 const Meeting = () => {
+    console.log("Access page")
     const roomID = getUrlParams().get('roomID') || randomID(5);
 
     let myMeeting = async (element) => {
@@ -36,11 +35,7 @@ const Meeting = () => {
             sharedLinks: [
                 {
                     name: 'Personal link',
-                    url:
-                        window.location.protocol + '//' +
-                        window.location.host + window.location.pathname +
-                        '?roomID=' +
-                        roomID,
+                    url: window.location.protocol + '//' + window.location.host + window.location.pathname + '?roomID=' + roomID,
                 },
             ],
             scenario: {

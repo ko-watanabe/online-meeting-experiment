@@ -4,7 +4,7 @@ import { useScrollYPosition } from "react-use-scroll-position";
 import "../styles/navbar.css";
 import "../styles/login.css";
 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { signOut } from 'firebase/auth';
 import { auth } from "../Page/Firebase";
 function Navbar({ links }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,6 @@ function Navbar({ links }) {
     signOut(auth).then((r) => {
       console.log("logout", userEmail)
       localStorage.clear()
-      // Reload the current page
       window.location.reload();
       console.log("Done")
     }).catch((error) => {
@@ -25,7 +24,6 @@ function Navbar({ links }) {
 
   return (
     <>
-
       <Container>
         <div
           className={`nav${scrollY > stickeyTrigger ? " nav-stickey" : ""}${menuOpen ? " nav-open" : ""
@@ -58,8 +56,6 @@ function Navbar({ links }) {
           </div>
         </div>
       </Container>
-
-
     </>
   );
 }
@@ -67,9 +63,6 @@ function Navbar({ links }) {
 Navbar.defaultProps = {
   links: [
     { title: "Home", href: "#home" },
-    // { title: "Features", href: "#features" },
-
-    // { title: "Contact", href: "#contact" },
     { title: "Login", href: "login" }
   ]
 };

@@ -20,53 +20,41 @@ const Login = ({ links }) => {
         e.preventDefault()
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
                 const user = userCredential;
                 console.log(user, "lokesh")
                 localStorage.setItem('auth', user.user.email)
-                // Reload the current page
                 re('/')
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
+                window.alert(error.message);
+                console.log(error.code);
+                console.log(error.message);
             });
     }
-
     const handleClick = async (e) => {
         e.preventDefault()
         console.log(email, password)
         await createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in 
                 const user = userCredential;
-
-                // ...
                 window.alert("Success")
-
+                console.log(user.email);
                 window.location.reload();
-
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage)
-                // ..
             });
     }
-    let a = 1
     const logout = () => {
         signOut(auth).then((r) => {
             console.log("logout", userEmail)
             localStorage.clear()
-            // Reload the current page
             window.location.reload();
-
-            // Sign-out successful.
             console.log("Done")
         }).catch((error) => {
             console.log(error)
-            // An error happened.
         });
     }
     return (
@@ -115,7 +103,7 @@ const Login = ({ links }) => {
                                 <form action="" class="flip-card__form">
                                     <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} name="email" class="flip-card__input" />
                                     <input type="password" placeholder="Password" onChange={(e) => setpassword(e.target.value)} name="password" class="flip-card__input" />
-                                    <button class="flip-card__btn" onClick={(e) => Login(e)}>Let`s go!</button>
+                                    <button class="flip-card__btn" onClick={(e) => Login(e)}>Let's go!</button>
                                 </form>
                             </div>
                             <div class="flip-card__back">

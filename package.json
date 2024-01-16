@@ -1,5 +1,5 @@
 {
-  "name": "chat",
+  "name": "online-meeting-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@zegocloud/zego-uikit-prebuilt": "^1.8.10",
     "@zegocloud/zego-uikit-rn": "^2.2.0",
     "firebase": "^10.1.0",
+    "levenary": "^1.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-delegate-component": "^1.0.0",

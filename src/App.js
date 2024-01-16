@@ -1,26 +1,19 @@
 import { Route, Routes } from "react-router";
-// import Welcome from "./Page/Welcome";
 import Meeting from "./Page/Meeting.jsx";
 import Main from "./Main.jsx";
 import Login from "./components/Login";
 import Private from "./Page/PrivateRoute";
 
 function App() {
-
-  // console.clear()
-
   return (
     <>
       <Routes>
         <Route path='/' element={<Main />} />
-
-
         <Route path='/meeting' element={
           <Private>
             <Meeting />
           </Private>
         } />
-
         <Route path='/login' element={<Login />} />
       </Routes>
     </>
