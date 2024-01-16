@@ -2,13 +2,15 @@ import React from "react";
 import { Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/login.css"
+
+const userEmail = localStorage.getItem("auth")
+
 function HeroBanner() {
   return (
     <section id="home">
       <Container>
         <Row style={{ display: "flex" }}>
           <div className="home-text">
-            {/* <div className="section-text__subtitle">Explore the whiskers</div> */}
             <div className="section-text__title-big">
               About Experiment
             </div>
@@ -32,11 +34,15 @@ function HeroBanner() {
             </div>
             <a href="#download">
               <Link to='/login' style={{ color: "whitesmoke" }}>
-                <button className="call-btn">Login / Signup</button>
+                <button className="login-btn">Login / Signup</button>
               </Link>
             </a>
+            <a href="#download">
+              {!userEmail == 1 ? (<div></div>) : (
+                <Link to='/meeting' style={{ color: "whitesmoke" }}><button className="call-btn">Create Room</button></Link>
+              )}
+            </a>
           </div>
-
           <div className="section-image">
             <img className="img-new" src="https://www.dingtone.me/images/download/img_download@2x.png" alt="App Preview" />
           </div>

@@ -6,6 +6,7 @@ import "../styles/login.css";
 
 import { signOut } from 'firebase/auth';
 import { auth } from "../Page/Firebase";
+import { Link } from "react-router-dom";
 function Navbar({ links }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollY = useScrollYPosition();
@@ -25,19 +26,12 @@ function Navbar({ links }) {
   return (
     <>
       <Container>
-        <div
-          className={`nav${scrollY > stickeyTrigger ? " nav-stickey" : ""}${menuOpen ? " nav-open" : ""
-            }`}
-        >
+        <div className={`nav${scrollY > stickeyTrigger ? " nav-stickey" : ""}${menuOpen ? " nav-open" : ""}`}>
           <div className="nav-content">
             <div className="nav-logo">Online Meeting Experiment</div>
-
             <nav className="nav-links__container">
-
-              <a className="nav-link" href={"/meeting"} >
-                <div className="nav-link__text">Create Room</div>
-                <div className="nav-link__background" />
-              </a>
+              {/* <div className="nav-link__text">Create Room</div>
+                <div className="nav-link__background" /> */}
               {
                 !userEmail == 1 ? (<a className="nav-link" href={"/login"} >
                   <div className="nav-link__text">Login</div>

@@ -277,6 +277,7 @@
 .call-btn {
     padding: 17px 40px;
     border-radius: 100px;
+    margin: 10px;
     border: 0;
     background-color: white;
     box-shadow: rgb(0 0 0 / 60%) 0 0 20px;
@@ -298,6 +299,35 @@
     background-color: hsl(261deg 80% 48%);
     color: hsl(0, 0%, 100%);
     box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.login-btn {
+    padding: 17px 40px;
+    border-radius: 100px;
+    margin: 10px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 60%) 0 0 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+
+.login-btn:hover {
+    letter-spacing: 3px;
+    background-color: #FF0000;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(255 0 0) 0px 7px 29px 0px;
+}
+
+.login-btn:active {
+    letter-spacing: 3px;
+    background-color: #FF0000;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(255 0 0) 0px 0px 0px 0px;
     transform: translateY(10px);
     transition: 100ms;
 }
