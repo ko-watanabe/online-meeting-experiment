@@ -29,8 +29,6 @@ section {
   section {
     height: auto;
   }
-
-
 }
 
 .section-text {
@@ -85,9 +83,9 @@ section {
   color: #202123;
   font-size: 1rem;
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   font-weight: 400;
-  max-width: 450px;
+  max-width: 700px;
 }
 
 .section-text__desc {
@@ -101,9 +99,9 @@ section {
 
 .section-image img,
 .section-image__small img {
-  width: 320px;
+  width: 600px;
 
-  padding: 0px;
+  padding-right: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
