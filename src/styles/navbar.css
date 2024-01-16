@@ -8,12 +8,12 @@
   height: 70px;
   overflow: hidden;
   z-index: 1000;
-  background-color: #202123;
+  background-color: #282828;
 }
 
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
-  background-color: #202123;
+  background-color: #282828;
   position: fixed;
   -webkit-box-shadow: 0 8px 6px -6px #ee6d6d;
   -moz-box-shadow: 0 8px 6px -6px #ee6d6d;
