@@ -6,7 +6,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-size: 16px;
-  font-family: "Nunito", sans-serif;
+  font-family: sans-serif;
 }
 
 main {
@@ -14,7 +14,7 @@ main {
 }
 
 main>*:nth-child(odd) {
-  background-color: #ea4d4e;
+  background-color: white;
   border-radius: 17px;
 }
 
@@ -54,13 +54,13 @@ section {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 40px;
-  color: #fcfcfc;
+  color: #202123;
 }
 
 .section-text__title-big {
   font-size: 4rem;
   font-weight: 700;
-  color: #fcfcfc;
+  color: #202123;
   line-height: 1.3;
   margin-bottom: 24px;
   max-width: 600px;
@@ -71,18 +71,18 @@ section {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 8px;
-  color: #23182c;
+  color: #202123;
 }
 
 .section-text__subtitle {
-  color: #fcfcfc;
+  color: #202123;
   font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 .section-text__body {
-  color: #fcfcfc;
+  color: #202123;
   font-size: 1rem;
   line-height: 30px;
   margin-bottom: 15px;
@@ -91,7 +91,7 @@ section {
 }
 
 .section-text__desc {
-  color: #707b8e;
+  color: #202123;
   font-size: 1rem;
   line-height: 30px;
   margin-bottom: 15px;
@@ -144,7 +144,7 @@ section {
   flex-direction: column;
   text-align: center;
   padding: 90px 18px;
-  background-color: #fff;
+  background-color: #202123;
   border-radius: 25px;
   border: none;
   margin: 12px 8px;
@@ -258,21 +258,6 @@ section#pricing {
   box-shadow: 0 10px 30px 0 rgba(133, 66, 189, 0.1);
 }
 
-/* .pricing-card::before {
-  content: "";
-  width: 70px;
-  height: 130px;
-  position: absolute;
-  right: 2px;
-  bottom: 2px;
-  z-index: 1;
-  background-image: url("./images/dot-bg.webp");
-  transition: 0.2s all ease-in-out;
-}
-.pricing-card:hover::before {
-  right: -25px;
-  bottom: -27px;
-} */
 .pricing-card__header {
   border-bottom: 2px solid #f4f4f4;
   margin-bottom: 46px;

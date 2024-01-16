@@ -17,12 +17,9 @@ const Main = () => {
             <Navbar />
             <main>
                 <HeroBanner />
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <Features />
-               
-               
-                
             </main>
             <Footer />
         </>

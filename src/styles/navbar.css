@@ -8,11 +8,12 @@
   height: 70px;
   overflow: hidden;
   z-index: 1000;
-  background-color: #ee6d6d;
+  background-color: #202123;
 }
+
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
-  background-color: #ee6d6d;
+  background-color: #202123;
   position: fixed;
   -webkit-box-shadow: 0 8px 6px -6px #ee6d6d;
   -moz-box-shadow: 0 8px 6px -6px #ee6d6d;
@@ -43,6 +44,7 @@
   margin-left: auto;
   align-items: center;
 }
+
 .nav-link {
   height: 100%;
   display: inline-flex;
@@ -51,10 +53,11 @@
   text-decoration: none;
   margin: 0px 8px;
 }
+
 .nav .nav-link__text {
   margin: auto 0px;
   padding: 0px 12px;
-  color: #000000;
+  color: white;
   font-size: 1.2rem;
   font-weight: 300;
 }
@@ -66,6 +69,7 @@
   background: #fcfcfc;
   transition: 0.2s all ease-in;
 }
+
 .nav-link:hover .nav-link__background {
   width: 100%;
 }
@@ -79,10 +83,11 @@
   border-radius: 5px;
   transition: 0.1s all ease-in;
 }
+
 .nav-menu__icon div {
   height: 2px;
   width: 100%;
-  background-color: #fcfcfc;
+  background-color: white;
   transform-origin: left;
   transition: 0.1s all ease-in;
   margin: 0px auto;
@@ -93,6 +98,7 @@
   margin-left: 0px;
   transform: rotate(45deg);
 }
+
 .nav-open .nav-menu__icon div:nth-of-type(2) {
   width: 40px;
   margin-right: 0px;
@@ -103,13 +109,15 @@
   .nav-open {
     height: 100vh;
     position: fixed;
-    background-color: #ea4d4e;
+    background-color: white;
     animation: nav-open 0.2s ease-in-out;
   }
+
   .nav-open .nav-content {
     height: 70px;
     margin-top: 0px;
   }
+
   .nav-links__container {
     position: absolute;
     top: 70px;
@@ -118,18 +126,22 @@
     display: flex;
     flex-direction: column;
   }
+
   .nav-link {
     height: 60px;
   }
-  .nav-link > * {
+
+  .nav-link>* {
     margin-left: auto;
     margin-right: auto;
   }
+
   .nav-menu__icon {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+
   .nav-open .nav-menu__icon {
     justify-content: space-between;
   }
@@ -139,14 +151,17 @@
   from {
     top: -70px;
   }
+
   to {
     top: 0px;
   }
 }
+
 @-webkit-keyframes nav-enter-anim {
   from {
     top: -70px;
   }
+
   to {
     top: 0px;
   }
@@ -156,14 +171,17 @@
   from {
     height: 70px;
   }
+
   to {
     height: 100vh;
   }
 }
+
 @-webkit-keyframes nav-open {
   from {
     height: 70px;
   }
+
   to {
     height: 100vh;
   }

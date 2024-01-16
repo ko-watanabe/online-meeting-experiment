@@ -8,9 +8,9 @@ function HeroBanner() {
       <Container>
         <Row style={{ display: "flex" }}>
           <div className="home-text">
-            <div className="section-text__subtitle">Explore the whiskers</div>
+            {/* <div className="section-text__subtitle">Explore the whiskers</div> */}
             <div className="section-text__title-big">
-              Call & Chat  With Your Friend Free
+              About experiment
             </div>
             <div className="section-text__body">
               Introducing our innovative video call app, seamlessly connecting users through high-quality video and audio communication. Enjoy group calls, screen sharing, and secure conversations, redefining virtual interactions for both personal and professional use.

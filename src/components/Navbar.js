@@ -15,12 +15,9 @@ function Navbar({ links }) {
       localStorage.clear()
       // Reload the current page
       window.location.reload();
-
-      // Sign-out successful.
       console.log("Done")
     }).catch((error) => {
       console.log(error)
-      // An error happened.
     });
   }
   const userEmail = localStorage.getItem("auth")
@@ -35,7 +32,7 @@ function Navbar({ links }) {
             }`}
         >
           <div className="nav-content">
-            <div className="nav-logo">Infinity Call</div>
+            <div className="nav-logo">Online Meeting Experiment</div>
 
             <nav className="nav-links__container">
 
@@ -43,10 +40,10 @@ function Navbar({ links }) {
                 <div className="nav-link__text">Home</div>
                 <div className="nav-link__background" />
               </a>
-              <a className="nav-link" href={"#Features"} >
+              {/* <a className="nav-link" href={"#Features"} >
                 <div className="nav-link__text">Features</div>
                 <div className="nav-link__background" />
-              </a>
+              </a> */}
               {
                 !userEmail == 1 ? (<a className="nav-link" href={"/login"} >
                   <div className="nav-link__text">Login</div>
@@ -81,9 +78,9 @@ function Navbar({ links }) {
 Navbar.defaultProps = {
   links: [
     { title: "Home", href: "#home" },
-    { title: "Features", href: "#features" },
+    // { title: "Features", href: "#features" },
 
-    { title: "Contact", href: "#contact" },
+    // { title: "Contact", href: "#contact" },
     { title: "Login", href: "login" }
   ]
 };
